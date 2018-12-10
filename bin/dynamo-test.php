@@ -7,6 +7,7 @@
  * Time: 02:51
  */
 
+use Vendor\DynamoTest\Commands\GlobalTableTest\InfiniteDataWriter;
 use Vendor\DynamoTest\Commands\GlobalTableTest\ReaderCommand;
 use Vendor\DynamoTest\Commands\GlobalTableTest\WriterCommand;
 use Vendor\DynamoTest\DynamoTest;
@@ -20,6 +21,7 @@ $consle->addCommands(
     [
         new WriterCommand(),
         new ReaderCommand(),
+        new InfiniteDataWriter()
     ]
 );
 
