@@ -44,6 +44,7 @@ class InfiniteDataWriter extends Command
 
             // set a threshold
             if ((time() - $beginSeed) > $threshold) {
+                $it->flush();
                 $output->writeln('');
                 $output->writeln("Auto stoped after {$threshold} seconds!");
                 $output->writeln("current index: {$uIdx}");
@@ -57,11 +58,11 @@ class InfiniteDataWriter extends Command
             $user->setName("uname-{$beginSeed}-{$uIdx}");
             $user->setAddress('');
             $it->persist($user);
-            $it->flush();
 
             $output->write('.');
 
             if ($uIdx % 100 == 0) {
+                $it->flush();
                 $it->clear();
             }
         }
