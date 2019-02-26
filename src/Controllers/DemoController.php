@@ -8,13 +8,20 @@
 
 namespace Vendor\DynamoTest\Controllers;
 
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
 
 class DemoController
 {
-    public function testAction()
+    public function testAction(Request $request)
     {
-        return new Response('Hello World!');
+        return new JsonResponse(
+            [
+                'word'      => 'hello guys',
+                'client_ip' => $request->getClientIp(),
+                'time'      => date("Y-m-d H:i:s", time()),
+            ]
+        );
     }
 }
 
