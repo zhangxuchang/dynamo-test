@@ -1,0 +1,12 @@
+{
+    "targets"            : {
+        "api-services": {
+            "type" : "web",
+            "hosts": "dynamo-test-dev.oasgames.com",
+            "index": "web/front.php",
+            "cpu": 256,
+            "memory": 512
+        }
+    },
+    "composer_enabled": true
+}
