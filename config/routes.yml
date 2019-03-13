@@ -2,3 +2,11 @@ home:
     path: /
     defaults:
         _controller: 'DemoController::testAction'
+
+slow_request:
+    path: /slow-req/{sec}
+    methods: GET
+    requirements:
+        sec: \d+
+    defaults:
+        _controller: '\Vendor\DynamoTest\Controllers\DemoController::slowRequestAction'

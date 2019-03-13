@@ -23,5 +23,23 @@ class DemoController
             ]
         );
     }
+
+    public function slowRequestAction($sec)
+    {
+        $sleepTime = 3;
+        if ($sec > 0) {
+            $sleepTime = $sec;
+        }
+
+        minfo('sleep %s seconds before work', $sleepTime);
+        sleep($sleepTime);
+        minfo('weekup after sleep %s seconds', $sleepTime);
+
+        return new JsonResponse(
+            [
+                'msg' => 'sleep test val:' . $sleepTime
+            ]
+        );
+    }
 }
 
