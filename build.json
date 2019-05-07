@@ -10,7 +10,11 @@
     },
     "log_files": {
         "log_handler": {
-            "path"                    : "/data/logs/*/",
+            "path"                    : "/project/logs/*/",
+            "file_names": [
+                "front",
+                "global.talbe.test.wirter"
+            ],
             "age"                     : "864000",
             "aws_group"               : "zxc-dynamo-test-t:@TARGET@",
             "aws_stream"              : "dynamo-test-web",
