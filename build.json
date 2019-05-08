@@ -16,8 +16,8 @@
                 "global.talbe.test.wirter"
             ],
             "age"                     : "864000",
-            "aws_group"               : "zxc-dynamo-test-t:@TARGET@",
-            "aws_stream"              : "dynamo-test-web",
+            "aws_group"               : "ecs/dynamo-test#@TARGET@",
+            "aws_stream"              : "syslog",
             "datetime_format"         : "",
             "multi_line_start_pattern": "%5c%5b%5cd*%5c%5d",
             "file_fingerprint_lines"  : "1"
