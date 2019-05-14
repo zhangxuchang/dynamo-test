@@ -1,7 +1,7 @@
 {
-    "targets"            : {
+    "targets": {
         "api-services": {
-            "type" : "web",
+            "type": "web",
             "hosts": "dynamo-test-dev.oasgames.com",
             "index": "web/front.php",
             "cpu": 256,
@@ -10,17 +10,17 @@
     },
     "log_files": {
         "log_handler": {
-            "path"                    : "/project/logs/*/",
+            "path": "/project/logs/*/",
             "file_names": [
                 "front",
                 "global.talbe.test.wirter"
             ],
-            "age"                     : "864000",
-            "aws_group"               : "ecs/dynamo-test#@TARGET@",
-            "aws_stream"              : "syslog",
-            "datetime_format"         : "",
+            "age": "864000",
+            "aws_group": "ecs/#@PRODUCT_CODE@#@TARGET@",
+            "aws_stream": "syslog",
+            "datetime_format": "",
             "multi_line_start_pattern": "%5c%5b%5cd*%5c%5d",
-            "file_fingerprint_lines"  : "1"
+            "file_fingerprint_lines": "1"
         }
     },
     "composer_enabled": true
