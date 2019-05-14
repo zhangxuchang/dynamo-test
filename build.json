@@ -5,7 +5,11 @@
             "hosts": "dynamo-test-dev.oasgames.com",
             "index": "web/front.php",
             "cpu": 256,
-            "memory": 512
+            "memory": 512,
+            "deploymentConfiguration": {
+                "minimumHealthyPercent": 100,
+                "maximumPercent": 200
+            }
         }
     },
     "log_files": {
