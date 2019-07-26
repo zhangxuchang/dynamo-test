@@ -1,0 +1,7 @@
+commands:
+    git-synchronize:
+        name: common:test
+        parallel: 1
+        once: false
+        alert: false
+        interval: 10
