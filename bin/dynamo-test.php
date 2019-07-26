@@ -7,6 +7,7 @@
  * Time: 02:51
  */
 
+use Vendor\DynamoTest\Commands\CommonTest;
 use Vendor\DynamoTest\Commands\GlobalTableTest\InfiniteDataWriter;
 use Vendor\DynamoTest\Commands\GlobalTableTest\ReaderCommand;
 use Vendor\DynamoTest\Commands\GlobalTableTest\WriterCommand;
@@ -21,7 +22,9 @@ $consle->addCommands(
     [
         new WriterCommand(),
         new ReaderCommand(),
-        new InfiniteDataWriter()
+        new InfiniteDataWriter(),
+        new Oasis\SlimApp\SentinelCommand\DaemonSentinelCommand('sentinel:run'),
+        new CommonTest()
     ]
 );
 

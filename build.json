@@ -10,6 +10,25 @@
                 "minimumHealthyPercent": 0,
                 "maximumPercent": 100
             }
+        },
+        "pro-cli": {
+            "type"           : "cli",
+            "command"        : "/project/bin/dynamo-test.php common:test cli",
+            "stop_before_run": false,
+            "keepalive"      : true
+        },
+        "pro-cron"      : {
+            "type"    : "cron",
+            "commands": [
+                {
+                    "command" : "/project/bin/dynamo-test.php common:test cron-1",
+                    "schedule": "*/1 * * * *"
+                },
+                {
+                    "command" : "/project/bin/dynamo-test.php common:test cron-2",
+                    "schedule": "*/2 * * * *"
+                }
+            ]
         }
     },
     "log_files": {
