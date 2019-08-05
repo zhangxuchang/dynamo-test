@@ -36,7 +36,8 @@
             "path": "/project/logs/*/",
             "file_names": [
                 "front",
-                "global.talbe.test.wirter"
+                "global.talbe.test.wirter",
+                "common.test"
             ],
             "age": "864000",
             "aws_group": "ecs/#@PRODUCT_CODE@#@TARGET@",
