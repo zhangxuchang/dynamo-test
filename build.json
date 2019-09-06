@@ -17,6 +17,12 @@
             "stop_before_run": false,
             "keepalive"      : true
         },
+        "err-cli": {
+            "type"           : "cli",
+            "command"        : "/project/bin/dynamo-test.php sentinel:run config/sentinel/test.yml",
+            "stop_before_run": false,
+            "keepalive"      : true
+        },
         "pro-cron"      : {
             "type"    : "cron",
             "commands": [
@@ -26,6 +32,10 @@
                 },
                 {
                     "command" : "/project/bin/dynamo-test.php common:test cron-2",
+                    "schedule": "*/2 * * * *"
+                },
+                {
+                    "command" : "/bin/dynamo-test.php common:test error",
                     "schedule": "*/2 * * * *"
                 }
             ]
@@ -47,5 +57,6 @@
             "file_fingerprint_lines": "1"
         }
     },
-    "composer_enabled": true
+    "composer_enabled": true,
+    "prepare_container_script": "/project/bin/dynamo-test.php  s:c:c"
 }
