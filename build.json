@@ -58,5 +58,5 @@
         }
     },
     "composer_enabled": true,
-    "prepare_container_script": "/project/bin/dynamo-test.php  s:c:c"
+    "pre_start_script": "/project/bin/dynamo-test.php  s:c:c"
 }
