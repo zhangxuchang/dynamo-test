@@ -58,5 +58,6 @@
         }
     },
     "composer_enabled": true,
+    "runtime_log_group_name": "ecs/stdout-dev/#@PRODUCT_CODE@#@TARGET@",
     "pre_start_script": "/project/bin/dynamo-test.php  s:c:c"
 }
