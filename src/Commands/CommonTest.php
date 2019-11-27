@@ -58,6 +58,7 @@ class CommonTest extends Command
             $msg .= " and hello {$author}";
         }
 
+        $this->output->writeln('success');
         $this->output->writeln($msg);
         minfo($msg);
     }
