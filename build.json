@@ -4,6 +4,7 @@
             "type": "web",
             "hosts": "dynamo-test-dev.oasgames.com",
             "index": "web/front.php",
+            "health_check_php": "bin/healthy.php",
             "cpu": 256,
             "memory": 512,
             "deploymentConfiguration": {
