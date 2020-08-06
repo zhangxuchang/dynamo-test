@@ -8,8 +8,8 @@
             "cpu": 256,
             "memory": 512,
             "deploymentConfiguration": {
-                "minimumHealthyPercent": 0,
-                "maximumPercent": 100
+                "minimumHealthyPercent": 100,
+                "maximumPercent": 200
             }
         },
         "pro-cli": {
