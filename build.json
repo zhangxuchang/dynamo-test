@@ -2,7 +2,7 @@
     "targets": {
         "api-services": {
             "type": "web",
-            "hosts": "dynamo-test-dev.oasgames.com",
+            "hosts": "*.com *.net",
             "index": "web/front.php",
             "health_check_php": "bin/healthy.php",
             "cpu": 256,
