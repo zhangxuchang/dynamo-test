@@ -18,12 +18,6 @@
             "stop_before_run": false,
             "keepalive"      : true
         },
-        "err-cli": {
-            "type"           : "cli",
-            "command"        : "/bin/dynamo-test.php sentinel:run config/sentinel/test.yml",
-            "stop_before_run": false,
-            "keepalive"      : true
-        },
         "pro-cron"      : {
             "type"    : "cron",
             "commands": [
@@ -60,5 +54,5 @@
     },
     "composer_enabled": true,
     "runtime_log_group_name": "ecs/stdout-dev/#@PRODUCT_CODE@#@TARGET@",
-    "pre_start_script": "/project/bin/dynamo-test.php  s:c:c; echo 1"
+    "pre_start_script": "/project/bin/dynamo-test.php  s:c:c echo 1"
 }
