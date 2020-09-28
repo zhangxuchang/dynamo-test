@@ -13,6 +13,7 @@ services:
                 name: dynamo-test
                 version: '0.1'
             http:
+                behind_elb: true
                 cache_dir: '%app.dir.cache%'
                 routing:
                     path: '%app.dir.config%/routes.yml'
