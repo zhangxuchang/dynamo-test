@@ -20,6 +20,7 @@ class DemoController
                 'word'      => 'hello guys',
                 'client_ip' => $request->getClientIp(),
                 'time'      => date("Y-m-d H:i:s", time()),
+                'headers'   => $request->headers->all(),
             ]
         );
     }
@@ -37,7 +38,7 @@ class DemoController
 
         return new JsonResponse(
             [
-                'msg' => 'sleep test val:' . $sleepTime
+                'msg' => 'sleep test val:'.$sleepTime,
             ]
         );
     }
