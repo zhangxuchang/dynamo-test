@@ -15,7 +15,7 @@
         "pro-cli": {
             "type"           : "cli",
             "command"        : "/project/bin/dynamo-test.php sentinel:run config/sentinel/test.yml",
-            "stop_before_run": false,
+            "stop_before_run": true,
             "keepalive"      : true
         },
         "pro-cron"      : {
