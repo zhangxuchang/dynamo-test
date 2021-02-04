@@ -18,6 +18,11 @@
             "stop_before_run": true,
             "keepalive"      : true
         },
+        "pro-job": {
+            "type"           : "cli",
+            "command"        : "/project/bin/dynamo-test.php common:test job-test",
+            "keepalive"      : false
+        },
         "pro-cron"      : {
             "type"    : "cron",
             "commands": [
